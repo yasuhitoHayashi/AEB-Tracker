@@ -1,9 +1,12 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.5)
 project(aeb-tracker)
 
 set(CMAKE_CXX_STANDARD 17)
 
 # Set the path to the YAML-CPP library and include directories
+include_directories("/opt/homebrew/include/eigen3")
+link_directories("/opt/homebrew/lib")
+
 find_package(yaml-cpp REQUIRED)
 
 # Add the path to the directory containing FindOpenCV.cmake to CMAKE_MODULE_PATH
